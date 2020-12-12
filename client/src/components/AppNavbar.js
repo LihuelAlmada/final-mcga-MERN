@@ -1,24 +1,14 @@
-/*import React from "react";
+import './style.css';
+import React from "react";
 import { Form } from "react-final-form";
 
-const noteList = () => {
+const AppNavbar = () => {
     return (
-        <Form
-            onSubmit={() => {
-                alert("submitting!");
-            }}
-        >
-            {({handleSubmit}) => (
-                <form onSubmit={handleSubmit}>
-                    <input placeholder="Name" type="text" />
-                    <input placeholder="Email" type="email" />
-                    <button type="submit">Submit</button>
-                </form>
-            )}
-        </Form>
+        <div>
+            <h2 className="header">Holis</h2>
+        </div>
     );
 }
 
-export default noteList;
+export default AppNavbar;
 
-*/

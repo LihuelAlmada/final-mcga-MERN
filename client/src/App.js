@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Form } from 'react-final-form';
+import AppNavbar from '../src/components/AppNavbar'
 
 class App extends Component {
   render () {
@@ -13,7 +14,7 @@ class App extends Component {
         >
             {({handleSubmit}) => (
                 <form className="frm" onSubmit={handleSubmit}>
-                  <h2 className="header">Sign In</h2>
+                  <AppNavbar/>
                   <div>
                     <label>First Name</label>
                     <input placeholder="Name" type="text" />
@@ -31,3 +32,17 @@ class App extends Component {
 }
 
 export default App;
+/*
+<Form
+            onSubmit={() => {
+                alert("submitting!");
+            }}
+        >
+            {({handleSubmit}) => (
+                <form onSubmit={handleSubmit}>
+                    <input placeholder="Name" type="text" />
+                    <input placeholder="Email" type="email" />
+                    <button type="submit">Submit</button>
+                </form>
+            )}
+        </Form>*/
