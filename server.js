@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 //para instansias post request, podes tenes un nombre del post
 const bodyParser = require('body-parser');
 
+const notes = require('./routes/api/notes')
+
 const app = express();
 
 //Middleware
@@ -16,6 +18,9 @@ mongoose
     .connect(db)
     .then(()=> console.log('MongoDB Connected...'))
     .catch(err => console.log(err));
+
+//Use Routes
+app.use('/api/notes', notes);
 
 const port = process.env.PORT || 5000;
 
