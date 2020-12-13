@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Form } from 'react-final-form';
-import AppNavbar from '../src/components/AppNavbar'
+import AppNavbar from '../src/components/AppNavbar';
+//import NoteList from '../src/components/NoteList';
 
 class App extends Component {
   render () {
@@ -15,6 +16,7 @@ class App extends Component {
             {({handleSubmit}) => (
                 <form className="frm" onSubmit={handleSubmit}>
                   <AppNavbar/>
+                
                   <div>
                     <label>First Name</label>
                     <input placeholder="Name" type="text" />
